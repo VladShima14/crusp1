@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Portfolio</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/portfolio.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar portfolio_header_box">
+                <div class="portfolio_header_box_logo">crusp</div>
+            </div>
+        </header>
+        <div class="h1"><h1>Our work</h1></div>
+        <section>
+         <div class="portfolio_section">
+                    <img class="portfolio_first_image" alt="all" src="{{ project.main_image.url }}" ></img>
+                    <div class="portfolio_first_text">{{ project.title }}</div>
+                <div class="portfolio_block">
+                    <div class="portfolio_second_text">{{ project.description }}</div>
+
+                    {% for image_project in project_images %}
+
+                        <img class="portfolio_second_image" alt="all" src="{{ image_project.image.url }}" ></img>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+    </section>
+    <div class="portfolio_other">
+        <p class="portfolio_other_text">All projects</p>
+        <div class="portfolio_other_block">
+                <div class="title-content">
+                    <input  type="checkbox" class="click-target" id="f1"/>
+                        <label for="f1">
+                            <img class="title_content_img" src="{% static 'img/push.PNG' %}" alt="нажми"/>
+                        </label>
+                </div>
+                      <div class="hidden-content">
+                              <div class="row">
+                                      <div class="customNavigation">
+                                          <a class="btn gray prev"><img src="{% static 'img/left.PNG' %}" alt="previous"/></a>
+                                          <!--<a class="btn gray next"><i class="icon ion-ios-arrow-right"></i></a>-->
+                                      </div>
+                                      <div id="slider-carousel" class="owl-carousel">
+
+                                          {% for project_slide in projects_slider %}
+                                              <div class="item">
+                                                  <a class="hoverfx" href="{% url 'studio:project_detail' pk=project_slide.pk %}">
+                                                    <div class="figure">
+                                                        <i class="icon ion-search">{{ project_slide.title }}</i>
+                                                    </div>
+                                              <!--<div class="figure">
+                                              <i class="icon ion-link"></i>
+                                              </div>-->
+                                                      <div class="overlay"></div>
+                                              <img src="{{ project_slide.main_image.url }}">
+                                                 </a>
+                                                  <h4>{{ project_slide.name }}</h4>
+                                          <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat</p>-->
+                                              </div>
+
+                                          {% endfor %}
+
+                                      </div>
+                                      <div class="customNavigation">
+                                            <a class="btn gray next"><img src="{% static "img/right.PNG" %}" alt="next"/></a>
+                                        </div>
+                                  </div>
+                      </div>
+        </div>
+    </div>
+    <footer>
+        <div class="portfolio_footer">©  2018  Crusp studio</div>
+    </footer>
+    <script>
+            $(document).ready(function () {
+            $(".click-target").click(function(){
+            $(this).parent().next(".hidden-content").slideToggle(1300); });});
+    </script>
+    <script>
+            $(document).ready(function() {
+            var owl = $("#slider-carousel");
+            owl.owlCarousel({
+            items: 4,
+            itemsDesktop: [1000, 4],
+            itemsDesktopSmall: [900, 2],
+            itemsTablet: [600, 1],
+            itemsMobile: false,
+            pagination: false
+            });
+            $(".next").click(function() {
+            owl.trigger('owl.next');
+            })
+            $(".prev").click(function() {
+            owl.trigger('owl.prev');
+            })
+            });
+    </script>
+    </body>
+</html>

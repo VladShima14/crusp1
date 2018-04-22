@@ -1,0 +1,551 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>crusp studio</title>
+        <meta charset="utf-8">
+         <link rel="stylesheet" type="text/css" href="{% static "css/main_page_css.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/reset.css" %}">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="cs_header_block">
+                <div class="cs_header_block_logo_text">
+                    <p class="cs_header_block_logo_text_white">crusp</p>
+                    <p class="cs_header_block_logo_text_red">crusp</p>
+                    <p class="cs_header_block_logo_text_small">web-studio</p>
+                </div>
+            </div>
+        </header>
+        <section class="cs_about">
+            <div class="cs_about_block">
+                <div class="cs_about_block_left">
+                    <h2 class="cs_about_block_left_h2"><span class="cs_about_block_left_span">|</span> about</h2>
+                </div>
+                <div class="cs_about_block_1">
+                    <div class="cs_about_block_1_top"><p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, </p></div>
+                    <div class="cs_about_block_1_bottom"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p></div>
+                </div>
+                <div class="cs_about_block_2">
+                        <div class="cs_about_block_2_top"><p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, </p></div>
+                        <div class="cs_about_block_2_bottom"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi voluptatibus nihil qui! Ut explicabo saepe odio qui voluptatibus nam beatae porro fugit? Ut quibusdam impedit provident veniam nostrum. Aut, iste.</p></div>
+                </div>
+            </div>
+        </section>
+        <section class="cs_team">
+            <div class="cs_team_block">
+                <div class="cs_team_block_left">
+                    <h2 class="cs_team_block_left_h2"><span class="cs_team_block_left_span">|</span> team</h2>
+                </div>
+                <div class="cs_team_block_center">
+                    <div class="cs_team_block_center_1_img"></div>
+                    <div class="cs_team_block_center_1_description">tratata</div>
+                    <div class="cs_team_block_center_2_img"></div>
+                    <div class="cs_team_block_center_2_description">tratata</div>
+                    <div class="cs_team_block_center_3_img"></div>
+                    <div class="cs_team_block_center_3_description">tratata</div>
+                    <div class="cs_team_block_center_4_img"></div>
+                    <div class="cs_team_block_center_4_description">tratata</div>
+                </div>
+            </div>
+        </section>
+        <section class="cs_portfolio">
+                {% for project in projects %}
+                    <a href="{% url 'studio:project_detail' pk=project.pk %}" class="cs_portfolio_block">
+                        <img src="{{ project.main_image.url }}" alt="" />
+                    </a>
+                {% endfor %}
+
+        </section>
+        <section class="cs_graph">
+            <div class="cs_graph_block">
+                <div class="cs_graph_block_left">
+                    <h2 class="cs_graph_block_left_h2"><span class="cs_graph_block_left_span">|</span> process</h2>
+                </div>
+                <div class="cs_graph_main">
+                    <img src="{% static "img/graph.png" %}" alt="process" class="cs_graph_image">
+                        <div class="cs_graph_cup">
+                            <svg version="1.1" id="cup" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="529.901px" height="529.901px" viewBox="0 0 529.901 529.901" style="enable-background:new 0 0 529.901 529.901;"
+                                xml:space="preserve">
+                                <g>
+                                <g>
+                                <path d="M21.415,444.532c14.277,14.277,31.501,21.416,51.678,21.416h365.451c20.178,0,37.404-7.139,51.675-21.416
+                                c14.271-14.27,21.409-31.497,21.409-51.674H0C0.004,413.035,7.142,430.262,21.415,444.532z"/>
+                                <path d="M137.046,356.312h200.995c17.508,0,32.545-6.279,45.111-18.842c12.56-12.563,18.842-27.601,18.842-45.111v-9.134h18.268
+                                c30.266,0,56.11-10.704,77.52-32.119c21.408-21.414,32.12-47.251,32.12-77.514c0-30.267-10.712-56.108-32.12-77.519
+                                c-21.409-21.411-47.254-32.121-77.52-32.121H91.363c-4.947,0-9.229,1.812-12.847,5.424c-3.616,3.617-5.424,7.902-5.424,12.85
+                                v210.131c0,17.511,6.28,32.548,18.843,45.111C104.498,350.033,119.535,356.312,137.046,356.312z M401.994,118.775h18.274
+                                c15.229,0,28.172,5.33,38.828,15.987c10.656,10.66,15.988,23.601,15.988,38.831c0,15.222-5.332,28.166-15.988,38.83
+                                c-10.656,10.657-23.6,15.988-38.828,15.988h-18.274V118.775z"/>
+                                </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                            </svg>
+                            <p>start</p>
+                            <div onmouseover="ChangeTextHome()" class="circle block1">
+                                <div class="inside">
+                                    <div class="point"></div>
+                                    <div class="number">1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cs_graph_design">
+                            <svg version="1.1" id="magic_stick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="467.374px" height="467.374px" viewBox="0 0 467.374 467.374" style="enable-background:new 0 0 467.374 467.374;"
+                                xml:space="preserve" stroke="#fff">
+                                <g>
+                                <g>
+                                <path d="M459.657,82.222c0-5.136-1.704-9.419-5.133-12.843l-56.531-56.531c-3.425-3.427-7.706-5.14-12.847-5.14
+                                    c-5.144,0-9.421,1.713-12.847,5.14L5.14,380.005C1.709,383.434,0,387.719,0,392.858c0,5.141,1.709,9.418,5.14,12.847
+                                    l56.529,56.527c3.431,3.429,7.708,5.141,12.85,5.141c5.137,0,9.419-1.704,12.847-5.141l367.162-367.16
+                                    C457.953,91.642,459.657,87.364,459.657,82.222z M332.038,165.877l-30.546-30.55l83.651-83.654l30.546,30.549L332.038,165.877z"/>
+                                <polygon points="65.384,73.087 73.948,45.109 101.925,36.545 73.948,27.979 65.384,0.001 56.818,27.979 28.84,36.545
+                                    56.818,45.109 		"/>
+                                <polygon points="139.61,108.494 156.743,164.455 173.876,108.494 229.835,91.361 173.876,74.23 156.743,18.269 139.61,74.23
+                                    83.651,91.361 		"/>
+                                <polygon points="439.392,210.7 430.829,182.723 422.267,210.7 394.287,219.265 422.267,227.83 430.829,255.805 439.392,227.83
+                                    467.374,219.265 		"/>
+                                <polygon points="248.106,73.087 256.672,45.109 284.648,36.545 256.672,27.979 248.106,0.001 239.544,27.979 211.564,36.545
+                                    239.544,45.109 		"/>
+                                </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                            </svg>
+                            <p>design</p>
+                            <div onmouseover="ChangeTextHome()" class="circle block2">
+                                <div class="inside">
+                                    <div class="point"></div>
+                                    <div class="number">2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cs_graph_frontend">
+                            <svg version="1.1" id="frontend" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    width="475.082px" height="475.081px" viewBox="0 0 475.082 475.081" style="enable-background:new 0 0 475.082 475.081;"
+                                    xml:space="preserve">
+                                <g>
+                                <path d="M461.667,49.963c-8.949-8.947-19.698-13.418-32.265-13.418H45.682c-12.562,0-23.317,4.471-32.264,13.418
+                                    C4.473,58.912,0,69.663,0,82.228V392.86c0,12.566,4.473,23.309,13.418,32.261c8.947,8.949,19.701,13.415,32.264,13.415h383.72
+                                    c12.566,0,23.315-4.466,32.265-13.415c8.945-8.952,13.415-19.701,13.415-32.261V82.228
+                                    C475.082,69.663,470.612,58.909,461.667,49.963z M146.183,392.85c0,2.673-0.859,4.856-2.574,6.571
+                                    c-1.712,1.711-3.899,2.562-6.567,2.562h-91.36c-2.662,0-4.853-0.852-6.567-2.562c-1.713-1.715-2.568-3.898-2.568-6.571V338.03
+                                    c0-2.669,0.855-4.853,2.568-6.56c1.714-1.719,3.905-2.574,6.567-2.574h91.363c2.667,0,4.858,0.855,6.567,2.574
+                                    c1.711,1.707,2.57,3.891,2.57,6.56V392.85z M146.183,283.221c0,2.663-0.859,4.854-2.574,6.564
+                                    c-1.712,1.714-3.899,2.569-6.567,2.569h-91.36c-2.662,0-4.853-0.855-6.567-2.569c-1.713-1.711-2.568-3.901-2.568-6.564v-54.819
+                                    c0-2.664,0.855-4.854,2.568-6.567c1.714-1.709,3.905-2.565,6.567-2.565h91.363c2.667,0,4.854,0.855,6.567,2.565
+                                    c1.711,1.713,2.57,3.903,2.57,6.567V283.221z M146.183,173.587c0,2.666-0.859,4.853-2.574,6.567
+                                    c-1.712,1.709-3.899,2.568-6.567,2.568h-91.36c-2.662,0-4.853-0.859-6.567-2.568c-1.713-1.715-2.568-3.901-2.568-6.567V118.77
+                                    c0-2.666,0.855-4.856,2.568-6.567c1.714-1.713,3.905-2.568,6.567-2.568h91.363c2.667,0,4.854,0.855,6.567,2.568
+                                    c1.711,1.711,2.57,3.901,2.57,6.567V173.587z M292.362,392.85c0,2.673-0.855,4.856-2.563,6.571c-1.711,1.711-3.9,2.562-6.57,2.562
+                                    H191.86c-2.663,0-4.853-0.852-6.567-2.562c-1.713-1.715-2.568-3.898-2.568-6.571V338.03c0-2.669,0.855-4.853,2.568-6.56
+                                    c1.714-1.719,3.904-2.574,6.567-2.574h91.365c2.669,0,4.859,0.855,6.57,2.574c1.704,1.707,2.56,3.891,2.56,6.56v54.819H292.362z
+                                        M292.362,283.221c0,2.663-0.855,4.854-2.563,6.564c-1.711,1.714-3.9,2.569-6.57,2.569H191.86c-2.663,0-4.853-0.855-6.567-2.569
+                                    c-1.713-1.711-2.568-3.901-2.568-6.564v-54.819c0-2.664,0.855-4.854,2.568-6.567c1.714-1.709,3.904-2.565,6.567-2.565h91.365
+                                    c2.669,0,4.859,0.855,6.57,2.565c1.704,1.713,2.56,3.903,2.56,6.567v54.819H292.362z M292.362,173.587
+                                    c0,2.666-0.855,4.853-2.563,6.567c-1.711,1.709-3.9,2.568-6.57,2.568H191.86c-2.663,0-4.853-0.859-6.567-2.568
+                                    c-1.713-1.715-2.568-3.901-2.568-6.567V118.77c0-2.666,0.855-4.856,2.568-6.567c1.714-1.713,3.904-2.568,6.567-2.568h91.365
+                                    c2.669,0,4.859,0.855,6.57,2.568c1.704,1.711,2.56,3.901,2.56,6.567v54.817H292.362z M438.536,392.85
+                                    c0,2.673-0.855,4.856-2.562,6.571c-1.718,1.711-3.908,2.562-6.571,2.562h-91.354c-2.673,0-4.862-0.852-6.57-2.562
+                                    c-1.711-1.715-2.56-3.898-2.56-6.571V338.03c0-2.669,0.849-4.853,2.56-6.56c1.708-1.719,3.897-2.574,6.57-2.574h91.354
+                                    c2.663,0,4.854,0.855,6.571,2.574c1.707,1.707,2.562,3.891,2.562,6.56V392.85z M438.536,283.221c0,2.663-0.855,4.854-2.562,6.564
+                                    c-1.718,1.714-3.908,2.569-6.571,2.569h-91.354c-2.673,0-4.862-0.855-6.57-2.569c-1.711-1.711-2.56-3.901-2.56-6.564v-54.819
+                                    c0-2.664,0.849-4.854,2.56-6.567c1.708-1.709,3.897-2.565,6.57-2.565h91.354c2.663,0,4.854,0.855,6.571,2.565
+                                    c1.707,1.713,2.562,3.903,2.562,6.567V283.221z M438.536,173.587c0,2.666-0.855,4.853-2.562,6.567
+                                    c-1.718,1.709-3.908,2.568-6.571,2.568h-91.354c-2.673,0-4.862-0.859-6.57-2.568c-1.711-1.715-2.56-3.901-2.56-6.567V118.77
+                                    c0-2.666,0.849-4.856,2.56-6.567c1.708-1.713,3.897-2.568,6.57-2.568h91.354c2.663,0,4.854,0.855,6.571,2.568
+                                    c1.707,1.711,2.562,3.901,2.562,6.567V173.587z"/>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                </svg>
+                            <p>frontend</p>
+                            <div onmouseover="ChangeTextHome()" class="circle block3">
+                                <div class="inside">
+                                    <div class="point"></div>
+                                    <div class="number">3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cs_graph_key">
+                            <svg version="1.1" id="key" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="469.09px" height="469.089px" viewBox="0 0 469.09 469.089" style="enable-background:new 0 0 469.09 469.089;"
+                                xml:space="preserve">
+                                <g>
+                                <g>
+                                <path d="M205.566,181.586L11.138,376.013c-7.232,7.231-10.85,15.893-10.85,25.981c0,10.28,3.617,18.842,10.85,25.7L41.4,458.529
+                                c7.426,7.043,16.086,10.561,25.981,10.561c10.089,0,18.654-3.518,25.697-10.561l194.709-194.715
+                                c-18.647-7.426-35.156-18.322-49.532-32.691C223.887,216.751,212.992,200.239,205.566,181.586z M98.504,396.57
+                                c-3.621,3.614-7.903,5.425-12.85,5.425c-4.949,0-9.231-1.811-12.847-5.425c-3.617-3.617-5.426-7.898-5.426-12.847
+                                c0-4.944,1.809-9.232,5.426-12.854c3.616-3.61,7.895-5.421,12.847-5.421c4.95,0,9.233,1.811,12.85,5.421
+                                c3.615,3.621,5.424,7.909,5.424,12.854C103.928,388.671,102.119,392.953,98.504,396.57z"/>
+                                <path d="M466.379,132.477c-1.618-1.906-3.856-2.856-6.707-2.856c-1.711,0-8.419,3.381-20.129,10.138
+                                c-11.704,6.755-24.603,14.462-38.685,23.124c-14.089,8.663-21.607,13.278-22.556,13.85l-55.106-30.55V82.229l83.651-48.254
+                                c3.045-2.093,4.568-4.758,4.568-7.994c0-3.234-1.523-5.898-4.568-7.992c-8.378-5.712-18.61-10.138-30.69-13.278
+                                C364.07,1.571,352.504,0,341.467,0c-35.211,0-65.332,12.518-90.358,37.546c-25.035,25.026-37.544,55.149-37.544,90.36
+                                c0,35.212,12.516,65.334,37.544,90.362c25.026,25.026,55.147,37.544,90.358,37.544c26.84,0,51.442-7.953,73.806-23.842
+                                c22.36-15.893,38.021-36.592,46.966-62.097c4.374-12.751,6.563-22.841,6.563-30.262
+                                C468.809,136.763,467.994,134.383,466.379,132.477z"/>
+                                </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                            </svg>
+                            <p>backend</p>
+                            <div onmouseover="ChangeText()" class="circle block4">
+                                <div class="inside">
+                                    <div class="point"></div>
+                                    <div class="number">4</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cs_graph_rocket">
+                            <svg version="1.1" id="rocket" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="466.227px" height="466.227px" viewBox="0 0 466.227 466.227" style="enable-background:new 0 0 466.227 466.227;"
+                                xml:space="preserve">
+                                <g>
+                                <path d="M463.36,2.852c-1.906-1.805-4.188-2.712-6.854-2.712c-49.677,0-90.694,6.755-123.051,20.271
+                                c-32.353,13.518-66.424,38.072-102.208,73.662c-15.225,15.418-31.977,33.977-50.248,55.675l-108.205,5.708
+                                c-3.046,0.387-5.52,1.906-7.423,4.57L1.418,269.666c-2.285,3.806-1.807,7.519,1.427,11.136l18.271,18.271
+                                c1.714,1.714,3.901,2.569,6.567,2.569c1.143,0,1.997-0.096,2.568-0.287l78.802-24.273l80.228,80.232l-24.269,78.795
+                                c-0.949,3.43-0.188,6.472,2.285,9.138l18.272,18.274c2.094,1.707,4.285,2.566,6.567,2.566c1.716,0,3.238-0.384,4.569-1.144
+                                l109.639-63.953c2.666-1.902,4.186-4.373,4.568-7.419l5.708-108.209c21.7-18.274,40.262-35.022,55.676-50.251
+                                c33.89-34.074,58.009-68.378,72.375-102.923c14.373-34.547,21.556-75.519,21.556-122.91C466.224,6.804,465.273,4.664,463.36,2.852z
+                                M394.277,110.92c-5.325,5.326-11.8,7.994-19.414,7.994s-14.082-2.665-19.414-7.994c-5.325-5.33-7.994-11.802-7.994-19.417
+                                c0-7.611,2.666-14.084,7.994-19.414c5.328-5.327,11.8-7.993,19.414-7.993s14.086,2.663,19.414,7.993s7.994,11.803,7.994,19.414
+                                C402.271,99.119,399.612,105.586,394.277,110.92z"/>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                            </svg>
+                            <p>demo</p>
+                            <div class="circle block5">
+                                <div class="inside">
+                                    <div class="point"></div>
+                                    <div class="number">5</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cs_graph_grow">
+                                <svg version="1.1" id="grow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    width="548.176px" height="548.176px" viewBox="0 0 548.176 548.176" style="enable-background:new 0 0 548.176 548.176;"
+                                    xml:space="preserve">
+                                    <g>
+                                    <g>
+                                    <path d="M534.75,68.238c-8.945-8.945-19.694-13.417-32.261-13.417H45.681c-12.562,0-23.313,4.471-32.264,13.417
+                                    C4.471,77.185,0,87.936,0,100.499v347.173c0,12.566,4.471,23.318,13.417,32.264c8.951,8.946,19.702,13.419,32.264,13.419h456.815
+                                    c12.56,0,23.312-4.473,32.258-13.419c8.945-8.945,13.422-19.697,13.422-32.264V100.499
+                                    C548.176,87.936,543.699,77.185,534.75,68.238z M511.627,447.672c0,2.478-0.903,4.62-2.711,6.427
+                                    c-1.81,1.807-3.952,2.71-6.427,2.71H45.681c-2.473,0-4.615-0.903-6.423-2.71c-1.807-1.813-2.712-3.949-2.712-6.427V100.499
+                                    c0-2.474,0.902-4.611,2.712-6.423c1.809-1.804,3.951-2.708,6.423-2.708h456.815c2.471,0,4.613,0.902,6.42,2.708
+                                    c1.808,1.812,2.711,3.949,2.711,6.423V447.672L511.627,447.672z"/>
+                                    <rect x="73.092" y="310.635" width="73.089" height="109.632"/>
+                                    <rect x="182.728" y="164.452" width="73.085" height="255.814"/>
+                                    <rect x="292.362" y="237.541" width="73.083" height="182.726"/>
+                                    <rect x="401.994" y="127.907" width="73.091" height="292.36"/>
+                                    </g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                </svg>
+                                <p>finish</p>
+                                <div onmouseover="ChangeText1()" class="circle block6">
+                                    <div class="inside">
+                                        <div class="point"></div>
+                                        <div class="number">6</div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="cs_gr_1">start</div>
+                        <div class="cs_gr_2">design</div>
+                        <div class="cs_gr_3">frontend</div>
+                        <div class="cs_gr_4">backend</div>
+                        <div class="cs_gr_5">demo</div>
+                        <div class="cs_gr_6">finish</div>
+                    <p class="cs_graph_main_description" id="p1">We like to listen to all of our clients needs and  discuss how we can effectively visualise and exceed any expectations,  regardless of complexities or budget. We like to keep our clients  updated and in the loop at each stage of any project, from concept to design Evoke Studio work closely with you in order to determine what type of Website/ Web solution will benefit your business.</p>
+                </div>
+                </div>
+        </section>
+        <section class="cs_contacts">
+            <div class="cs_contacts_block">
+                <div class="cs_contacts_block_left">
+                    <h2 class="cs_contacts_block_left_h2"><span class="cs_contacts_block_left_span">|</span> contacts</h2>
+                </div>
+                <div class="cs_contacts_block_center">
+                <div class="cs_contacts_block_center_h3">
+                    <h3>We are always ready to help you. there are many ways to contact us. you may drop us a line. give us a call or send an email. choose what suits you the most</h3>
+                </div>
+                    <div class="cs_contacts_block_center_left">
+                        <address>
+                            <p>2 Glinki Street, Dnipro, Ukraine</p>
+                            <span>cruspstudio@gmail.com </br>
+                            8800-555-22-33</span>
+                            <p>7 Days a week from 10.00 to 20.00</p>
+                        </address>
+                        <div class="cs_contacts_block_center_left_social_networks">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="25px" height="25px" viewBox="0 0 56.693 56.693" enable-background="new 0 0 56.693 56.693" xml:space="preserve">
+                                <path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029
+                                c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77
+                                L40.43,21.739z"/>
+                            </svg>
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="25px" height="25px" viewBox="0 0 56.7 56.7" style="enable-background:new 0 0 56.7 56.7;" xml:space="preserve">
+                                <g>
+                                <path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+                                c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
+                                <circle cx="41.5" cy="16.4" r="2.9"/>
+                                <path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+                                h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.4,39.9c0,3.1-0.9,5.6-2.7,7.3
+                                c-1.8,1.7-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+                                c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9z"/>
+                                </g>
+                            </svg>
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="25px" height="25px" viewBox="0 0 56.693 56.693" enable-background="new 0 0 56.693 56.693" xml:space="preserve">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M52.43,24.152c-0.324-1.588-0.811-3.152-1.441-4.646
+                                c-0.619-1.467-1.387-2.879-2.279-4.199c-0.885-1.309-1.9-2.539-3.018-3.656c-1.117-1.119-2.348-2.135-3.656-3.018
+                                c-1.32-0.895-2.734-1.66-4.199-2.281c-1.494-0.629-3.057-1.117-4.646-1.439c-1.627-0.334-3.303-0.504-4.977-0.504
+                                c-1.676,0-3.35,0.17-4.979,0.504c-1.588,0.322-3.152,0.811-4.645,1.439c-1.465,0.621-2.879,1.387-4.201,2.281
+                                c-1.309,0.883-2.539,1.898-3.656,3.018c-1.118,1.117-2.132,2.348-3.016,3.656c-0.893,1.32-1.66,2.732-2.279,4.199
+                                C4.805,21,4.32,22.564,3.995,24.152c-0.333,1.625-0.502,3.301-0.502,4.976c0,1.678,0.169,3.354,0.502,4.98
+                                c0.325,1.588,0.811,3.152,1.442,4.645c0.619,1.465,1.387,2.881,2.279,4.201c0.884,1.309,1.898,2.537,3.016,3.656
+                                c1.117,1.117,2.348,2.131,3.656,3.016c1.322,0.893,2.736,1.66,4.201,2.279c1.492,0.633,3.057,1.115,4.645,1.441
+                                c1.629,0.336,3.303,0.504,4.979,0.504c1.674,0,3.35-0.168,4.977-0.504c1.59-0.326,3.152-0.809,4.646-1.441
+                                c1.465-0.619,2.879-1.387,4.199-2.279c1.309-0.885,2.539-1.898,3.656-3.016c1.117-1.119,2.133-2.348,3.018-3.656
+                                c0.893-1.32,1.66-2.736,2.279-4.201c0.631-1.492,1.117-3.057,1.441-4.645c0.334-1.627,0.502-3.303,0.502-4.98
+                                C52.932,27.453,52.764,25.777,52.43,24.152z M49.316,28.919c-0.305-0.066-7.449-1.604-14.703-0.692
+                                c-0.148-0.361-0.299-0.725-0.455-1.09c-0.439-1.033-0.912-2.057-1.404-3.062c8.338-3.402,11.723-8.297,11.762-8.355
+                                C47.477,19.314,49.268,23.908,49.316,28.919z M42.156,13.285c-0.053,0.082-3.059,4.658-11.027,7.645
+                                c-3.609-6.631-7.574-11.898-7.891-12.316c1.596-0.387,3.26-0.596,4.975-0.596C33.559,8.018,38.436,10.01,42.156,13.285z
+                                M23.156,8.631c0,0.002-0.004,0.004-0.004,0.004s-0.023,0.006-0.062,0.014C23.111,8.643,23.135,8.639,23.156,8.631z M19.205,10.035
+                                c0.281,0.377,4.186,5.67,7.84,12.164c-10.137,2.693-18.934,2.588-19.492,2.578C8.925,18.238,13.318,12.816,19.205,10.035z
+                                M7.102,29.128c0-0.225,0.01-0.445,0.018-0.667c0.372,0.008,10.804,0.245,21.673-3.008c0.605,1.184,1.184,2.387,1.713,3.589
+                                c-0.279,0.078-0.557,0.162-0.832,0.252c-11.393,3.682-17.172,13.934-17.172,13.934s0.008,0.006,0.008,0.01
+                                C9.149,39.497,7.102,34.552,7.102,29.128z M28.213,50.241c-5.109,0-9.795-1.816-13.447-4.838c0.277,0.225,0.473,0.369,0.473,0.369
+                                s4.047-8.826,16.566-13.188c0.047-0.018,0.094-0.031,0.141-0.045c2.971,7.719,4.197,14.184,4.51,16.029
+                                C33.922,49.646,31.137,50.241,28.213,50.241z M40.01,46.64c-0.215-1.275-1.34-7.471-4.109-15.08
+                                c6.814-1.09,12.721,0.779,13.156,0.922C48.117,38.364,44.75,43.438,40.01,46.64z"/>
+                            </svg>
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="25px" height="25px" viewBox="0 0 56.693 56.693" enable-background="new 0 0 56.693 56.693" xml:space="preserve">
+                                <path d="M30.374,4.622c-13.586,0-20.437,9.74-20.437,17.864c0,4.918,1.862,9.293,5.855,10.922c0.655,0.27,1.242,0.01,1.432-0.715
+                                c0.132-0.5,0.445-1.766,0.584-2.295c0.191-0.717,0.117-0.967-0.412-1.594c-1.151-1.357-1.888-3.115-1.888-5.607
+                                c0-7.226,5.407-13.695,14.079-13.695c7.679,0,11.898,4.692,11.898,10.957c0,8.246-3.649,15.205-9.065,15.205
+                                c-2.992,0-5.23-2.473-4.514-5.508c0.859-3.623,2.524-7.531,2.524-10.148c0-2.34-1.257-4.292-3.856-4.292
+                                c-3.058,0-5.515,3.164-5.515,7.401c0,2.699,0.912,4.525,0.912,4.525s-3.129,13.26-3.678,15.582
+                                c-1.092,4.625-0.164,10.293-0.085,10.865c0.046,0.34,0.482,0.422,0.68,0.166c0.281-0.369,3.925-4.865,5.162-9.359
+                                c0.351-1.271,2.011-7.859,2.011-7.859c0.994,1.896,3.898,3.562,6.986,3.562c9.191,0,15.428-8.379,15.428-19.595
+                                C48.476,12.521,41.292,4.622,30.374,4.622z"/>
+                            </svg>
+                        </div>
+                    </div>
+                            <form>
+                            <label class="cs_registration_form_block_name">
+                                <input type="text" name="" id="" placeholder="Your name" class="cs_registration_form_block_input">
+                            </label>
+                            <label class="cs_registration_form_block_email">
+                                <input type="text" name="" id="" placeholder="Your e-mail" class="cs_registration_form_block_input">
+                            </label>
+                            <label class="cs_registration_form_block_message">
+                                    <textarea type="text" name="" id="" placeholder="Message" class="cs_registration_form_block_input_message"></textarea>
+                            </label>
+                        <a href="#" class="cs_registration_button_a">send</a>
+                    </form>
+                    </div>
+                </div>
+            </section>
+        <footer>
+            <div class="cs_footer">
+                        <img src="{% static "img/logo_down.png" %}" class="cs_footer_logo" alt="logo"/>
+                <div class="cs_footer_text">web-studio</div>
+                <p>	&#64; 2018</p>
+            </div>
+        </footer>
+        <script>
+            function ChangeText()
+                {
+                document.getElementById("p1").innerHTML="Once this is clarified, we design and build your website with your approval each step of the way.";
+                }
+            function ChangeTextHome()
+                {
+                document.getElementById("p1").innerHTML="We like to listen to all of our clients needs and  discuss how we can effectively visualise and exceed any expectations,  regardless of complexities or budget. We like to keep our clients  updated and in the loop at each stage of any project, from concept to design Evoke Studio work closely with you in order to determine what type of Website/ Web solution will benefit your business.";
+                }
+            function ChangeText1()
+                {
+                document.getElementById("p1").innerHTML="A successful website will first entice upon arrival and only be two clicks away from where customers or prospective clients will want to be. It only takes a few seconds for a visitor to decide whether they should stay or go, with Evoke Studio the decision is already made as our implemented design will give a great first impression."
+                }
+        </script>
+    </body>
+</html>

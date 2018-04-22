@@ -1,0 +1,930 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900');
+header {
+    background-color: #030303;
+}
+.cs_header_block {
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+    padding-bottom: 250px;
+}
+.cs_header_block_logo_text {
+    position: relative;
+    padding-bottom: 250px;
+    max-width: 250px;
+    left: calc(50% - 146px);
+    top: 200px;
+  }
+  .cs_header_block_logo_text_white {
+    font-size: 80px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: white;
+    position: absolute;
+}
+.cs_header_block_logo_text_small {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 80px;
+    left: 160px;
+}
+/* блок about*/
+.cs_about {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding-bottom: 150px;
+}
+.cs_about_block {
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    display: flex;
+}
+.cs_about_block_left {
+    display: block;
+    max-width: 50px;
+}
+.cs_about_block_left_h2 {
+    padding-top: 100px;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+.cs_about_block_left_span {
+    font-weight: 100;
+    font-size: 30px;
+}
+.cs_about_block_1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 35%;
+    padding-left: 16.5%;
+    padding-top: 100px;
+}
+.cs_about_block_1_top {
+    font-weight: bold;
+    max-width: 90%;
+    font-size: 16px;    
+}
+.cs_about_block_1_bottom {
+    padding-top: 50px;
+    font-size: 14px;
+    max-width: 60%;
+}
+.cs_about_block_2 {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    padding-top: 100px;
+    padding-left: 0.5%;
+}
+.cs_about_block_2_top {
+    font-weight: bold;
+    font-size: 16px;
+}
+.cs_about_block_2_bottom {
+    padding-top: 50px;
+    font-size: 14px;
+    max-width: 70%;
+}
+/* блок team*/
+.cs_team {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #FFF;     
+    background-color: #030303;
+}
+.cs_team_block {
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.cs_team_block_left {
+    display: block;
+    max-width: 50px;
+}
+.cs_team_block_left_h2 {
+    padding-top: 50px;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+.cs_team_block_left_span {
+    font-weight: 100;
+    font-size: 30px;
+}
+.cs_team_block_center { 
+   margin-left: 16%;
+   margin-top: 50px;
+   max-width: 80%;
+   display: grid;
+   grid-template-rows: repeat(2, 1fr);
+   grid-template-columns: repeat(4, 1fr);
+   grid-row-gap: 25px;
+   grid-column-gap: 40px;
+}
+.cs_team_block_center_1_img, .cs_team_block_center_2_img, .cs_team_block_center_3_img, .cs_team_block_center_4_img {
+    width: 170px;
+    height: 180px;
+    background-color: gray;
+}
+.cs_team_block_center_1_description, .cs_team_block_center_2_description, .cs_team_block_center_3_description, .cs_team_block_center_4_description {
+    align-content: center;
+    align-self: center;
+    justify-self: left;
+}
+.cs_portfolio {
+    max-width: 100%;
+    margin: 0 auto 0 auto;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0px;
+}
+.cs_portfolio_block {
+    height: 300px;
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+}
+.cs_portfolio_block:nth-child(1) {
+    background-color: rgb(112, 112, 112);
+}
+.cs_portfolio_block:nth-child(3) {
+    background-color: rgb(112, 112, 112);
+}
+.cs_portfolio_block:nth-child(6) {
+    background-color: rgb(112, 112, 112);
+}
+.cs_portfolio_block:nth-child(8) {
+    background-color: rgb(112, 112, 112);
+}
+.cs_portfolio_block:hover {
+    background-color: rgb(51, 51, 51);
+    background-image: url(cross.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cs_graph {
+    padding: 100px 0 200px 0;   
+    background-color: #030303;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #FFF;  
+    max-height: 350px;
+    overflow: hidden;
+}
+.cs_graph_block {
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    display: flex;
+}
+.cs_graph_block_left {
+    display: block;
+    max-width: 50px;
+}
+.cs_graph_block_left_h2 {
+    padding-top: 0px;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+.cs_graph_block_left_span {
+    font-weight: 100;
+    font-size: 30px;
+}
+.cs_graph_main {
+    position: relative;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.cs_graph_main p {
+    position: relative;
+    top: -20px;
+    left: -5px;
+    font-size: 12px;
+}
+.cs_graph_image {
+    padding: 100px 0 0 50px;
+}
+.cs_graph_cup {
+    position: absolute;
+    top: 320px;
+    left: 40px;
+}
+.cs_graph_cup p {
+    left: -5px;
+}
+.cs_graph_main svg {
+    position: relative;
+    top: -25px;
+    left: -5px;
+}
+.cs_graph_frontend {
+    position: absolute;
+    top: 230px;
+    left: 340px;
+}
+.cs_graph_frontend p {
+    left: -15px;
+}
+.cs_graph_design {
+    position: absolute;
+    top: 220px;
+    left: 195px;
+}
+.cs_graph_design p {
+    left: -10px;
+}
+.cs_graph_key {
+    position: absolute;
+    top: 130px;
+    left: 495px;
+}
+.cs_graph_key p {
+    left: -15px;
+}
+.cs_graph_rocket {
+    position: absolute;
+    top: 170px;
+    left: 640px;
+}
+.cs_graph_grow {
+    position: absolute;
+    top: 60px;
+    left: 775px;
+}
+#magic_stick {
+    height: 30px;
+    width: 30px;
+    fill: white;    
+}
+#cup {
+    height: 30px;
+    width: 30px;
+    fill: white;
+}
+#frontend {
+    height: 30px;
+    width: 30px;
+    fill: white;    
+}
+#key {
+    height: 30px;
+    width: 30px;
+    fill: white;
+}
+#rocket {
+    height: 30px;
+    width: 30px;
+    fill: white;
+}
+#grow {
+    height: 30px;
+    width: 30px;
+    fill: white;    
+}
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    background-color: black;
+    transition-duration: 0.5s;
+    overflow: hidden;
+}
+.circle:hover {
+    width: 25px;
+    height: 25px;
+}
+.point {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    position: relative;
+    left: 6px;
+    top: 6px;
+}
+.number {
+    position: relative;
+    left: 6px;
+    top: 22px;
+    color: white;
+}
+.circle:hover .point {
+    position: relative;
+    left: 10px;
+    top: -15px;
+}
+.circle:hover .number {
+    left: 9px;
+    top: -2px;
+}
+.block1 {
+    position: relative;
+    top: -10px;
+}
+.block3 {
+    position: relative;
+    top: -10px;
+}
+.block2 {
+    position: relative;
+    top: -15px;
+}
+.block4 {
+    position: relative;
+    top: -15px;
+}
+.block5 {
+    position: relative;
+    top: -10px;
+}
+.block6 {
+    position: relative;
+    top: -10px;
+}
+.cs_graph_main_description {
+    color: white;
+    max-width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding-left: 500px;
+    position: absolute;
+    margin-top: 50px;
+}
+.cs_gr_1 {
+    display: none;
+}
+.cs_gr_2 {
+    display: none;
+}
+.cs_gr_3 {
+    display: none;
+}
+.cs_gr_4 {
+    display: none;
+}
+.cs_gr_5 {
+    display: none;
+}
+.cs_gr_6 {
+    display: none;
+}
+.cs_contacts {
+    max-width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.cs_contacts_block {
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
+}
+.cs_contacts_block_left {
+    display: block;
+    max-width: 50px;
+}
+.cs_contacts_block_left_h2 {
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+.cs_contacts_block_left_span {
+    font-weight: 100;
+    font-size: 30px;
+}
+.cs_contacts_block_center {
+    display: grid;
+    grid-gap: 5px;
+    padding-left: 100px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+.cs_contacts_block_center input {
+    width: 90%;
+    height: 25%;
+    border: 1.2px solid black;
+    margin-bottom: 10px;
+}
+.cs_contacts_block_center input:hover {
+    border: 1px solid black;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+
+.cs_contacts_block_center_h3 {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    font-weight: bold;
+}
+
+input::-webkit-input-placeholder {
+    text-indent: 0px;   
+    transition: text-indent 0.3s ease;
+    text-align: center;
+}
+input:focus::-webkit-input-placeholder {
+    text-indent: 500px; 
+    transition: text-indent 0.3s ease;
+}
+input::-moz-placeholder {
+    text-indent: 0px;   
+    transition: text-indent 0.3s ease;
+
+}
+input:focus::-moz-placeholder {
+    text-indent: 500px; 
+    transition: text-indent 0.3s ease;
+}
+input:-ms-input-placeholder {
+    text-indent: 0px;   
+    transition: text-indent 0.3s ease;
+
+}
+input:focus:-ms-input-placeholder {
+    text-indent: 500px; 
+    transition: text-indent 0.3s ease;
+}
+.cs_contacts_block_center_left {
+    grid-column: 1 / 3;
+    grid-row: 3 / 5;
+    font-size: 12px;
+    color: gray;
+    line-height: 1.5;
+}
+.cs_contacts_block_center_left span {
+    color: black;
+}
+.cs_registration_form_block_input_message { 
+    height: 50%;
+    width: 89%;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+form {
+    grid-column: 4 / 6;
+    grid-row: 2 / 4;
+}
+.cs_registration_form_block_input_message:hover {
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+.cs_registration_button_a  {
+    text-decoration: none;  
+    text-transform: uppercase;
+    font-size: 12px;
+    color: black; 
+    border: 1.2px solid black;
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;  
+    transition: 0.7s;
+}
+.cs_registration_button_a:focus, a:hover {
+    color: white;
+    background-color: black;
+    text-decoration: none; 
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.cs_contacts_block_center_left_social_networks {
+    margin-top: 25px;
+    margin-left: -10px;
+}
+.cs_contacts_block_center_left_social_networks svg {
+    transition: 0.7s;
+    fill: gray;
+    padding-right: 15px;
+}
+.cs_contacts_block_center_left_social_networks svg:hover {
+    fill: black;
+}
+footer {
+    background-color: #030303;
+
+}
+.cs_footer {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding-bottom: 10px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cs_footer_logo {
+    width: 150px;
+}
+.cs_footer_text {
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    padding-top: 10px;
+}
+.cs_footer p {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+@media screen and (max-width: 1035px) {
+    .cs_contacts_block label {
+        padding-right: 50px;
+    }
+    .cs_registration_button_a {
+        margin-right: 50px;
+    }
+}
+@media screen and (max-width: 870px) {
+    .cs_header_block {
+        padding-bottom: 50px;
+    } 
+    .cs_header_block_logo_text {
+        top: 100px;
+    }
+    .cs_about {
+        padding-top: 0px;
+        padding-bottom: 50px;
+    }
+    .cs_about_block {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cs_about_block_left h2 {
+        writing-mode: horizontal-tb;
+        padding-top: 50px;
+    }
+    .cs_about_block_left {
+        display: block;
+        max-width: 200px;
+    }
+    .cs_about_block_left span {
+        display: none;
+    }
+    .cs_about_block_1 {
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        padding-top: 50px;
+        padding-left: 0px;
+        text-align: center;
+    }   
+    .cs_about_block_1_bottom {
+        max-width: 80%;
+        padding-left: 50px;
+    }
+    .cs_about_block_1_top {
+        max-width: 100%;
+    }
+    .cs_about_block_2 {
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        padding-top: 50px;
+        padding-left: 0px;
+        text-align: center;
+    }   
+    .cs_about_block_2_bottom {
+        max-width: 80%;
+        padding-left: 50px;
+    }
+    .cs_about_block_2_top {
+        max-width: 100%;
+    }
+    .cs_team_block {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cs_team_block_left {
+        max-width: 200px;
+    }
+    .cs_team_block_left_h2 {
+        padding-top: 0px;
+        writing-mode: horizontal-tb;
+    }
+    .cs_team_block_left_span {
+        display: none;
+    }
+    .cs_portfolio {
+        max-width: 100%;
+        margin: 0 auto 0 auto;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0px;
+    }
+    .cs_portfolio_block {
+        height: 250px;
+        width: 100%;
+    }
+    .cs_portfolio_block:nth-child(1) {
+        background-color: rgb(112, 112, 112);
+    }
+    .cs_portfolio_block:nth-child(2) {
+        background-color: rgb(204, 204, 204);
+    }
+    .cs_portfolio_block:nth-child(3) {
+        background-color: rgb(204, 204, 204);
+    }
+    .cs_portfolio_block:nth-child(4) {
+        background-color: rgb(112, 112, 112);
+    }
+    .cs_portfolio_block:nth-child(5) {
+        background-color: rgb(112, 112, 112);
+    }
+    .cs_portfolio_block:nth-child(6) {
+        background-color: rgb(204, 204, 204);
+    }  
+    .cs_portfolio_block:hover {
+        background-color: rgb(51, 51, 51);
+        background-image: url(cross.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .cs_graph {
+        padding: 0px 0 100px 0;   
+        background-color: #030303;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        color: #FFF;  
+        max-height: 500px;
+    }
+    .cs_graph_block {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cs_graph_block_left {
+        display: block;
+        max-width: 200px;
+        padding-top: 50px;
+    }
+    .cs_graph_block_left h2 {
+        writing-mode: horizontal-tb;
+    }
+    .cs_graph_block_left span {
+        display: none;
+    }
+    .cs_contacts_block {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        padding-top: 50px;
+    }
+    .cs_contacts_block_left {
+        display: block;
+        max-width: 200px;
+    }
+    .cs_contacts_block_left_h2 {
+        writing-mode: horizontal-tb;
+        font-size: 36px;
+        padding-bottom: 50px;
+        text-transform: uppercase;
+    }
+    .cs_contacts_block_left_span {
+        display: none;
+    }
+    .cs_contacts_block_center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+    .cs_contacts_block_center input {
+        margin-top: 10px;
+        width: 95%;
+        height: 25px;
+        border: 1.2px solid black;
+    }
+    .cs_contacts_block_center input:hover {
+        border: 1px solid black;
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+    }
+    .cs_contacts_block_center_h3 {
+        display: block;
+        max-width: 60%;
+        margin: 0;
+        text-align: center;
+    }
+    .cs_contacts_block_center_left {
+        padding-top: 20px;
+        text-align: center;
+    }
+    .cs_contacts_block label {
+        padding-right: 0;
+    }
+    .cs_registration_button_a {
+        margin-right: 0;
+        padding: 10px 20px 10px 20px;
+        margin-top: 10px;
+        text-align: center;
+        max-width: 72%;
+    }
+    .cs_registration_form_block_message {
+        margin-top: 10px;
+        width: 105%;
+    }
+    .cs_contacts_block_center_left_social_networks {
+        padding-left: 15px;
+    }
+}
+@media screen and (max-width: 820px) {
+    .cs_team_block_center { 
+        display: grid;
+        margin-left: 0;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 25px;
+        grid-column-gap: 40px;
+    }
+    .cs_about_block_1_bottom {
+        padding-left: 0;
+        margin: 0 auto;
+    }
+    .cs_about_block_2 { 
+        padding-left: 0;
+    }
+    .cs_about_block_2_bottom {
+        padding-left: 0;
+        margin: 0 auto;
+    }
+    .cs_portfolio {
+        display: grid;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cs_portfolio_block:nth-child(odd) {
+        background-color: rgb(204, 204, 204);
+    }
+    .cs_portfolio_block:nth-child(even) {
+        background-color: rgb(112, 112, 112);
+    }
+    .cs_portfolio_block:hover {
+        background-color: rgb(51, 51, 51);
+        background-image: url(cross.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .cs_graph {
+        padding: 0 0 200px 0;   
+        background-color: #030303;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        color: #FFF;  
+        max-height: 450px;
+        overflow: hidden;
+    }
+    .cs_graph_image {
+        display: none;
+    }
+    .cs_graph_main_description {
+        display: none;
+    }
+    .cs_graph_main {
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 15px;
+        grid-column-gap: 15px;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .cs_graph_main p {
+        display: none;
+    }
+    .cs_gr_1 {
+        color: white;
+        align-self: center;
+        display: unset;
+    }
+    .cs_gr_2 {
+        color: white;
+        align-self: center;
+        display: unset;
+    }
+    .cs_gr_3 {
+        color: white;
+        align-self: center;
+        display: unset;
+    }
+    .cs_gr_4 {
+        color: white;
+        align-self: center;
+        display: unset;
+    }
+    .cs_gr_5 {
+        color: white;
+        align-self: center;
+        display: unset;
+    }
+    .cs_gr_6 {
+        color: white;
+        align-self: center;
+        display: unset;
+    }
+    .circle { 
+        display: none;
+    }
+    .cs_graph_frontend {
+        position: static;
+        top: 0;
+        left: 0;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .cs_graph_design {
+        position: static;
+        top: 0;
+        left: 0;
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .cs_graph_key {
+        position: static;
+        top: 0;
+        left: 0;
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    .cs_graph_rocket {
+        position: static;
+        top: 0;
+        left: 0;
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+    .cs_graph_grow {
+        position: static;
+        top: 0;
+        left: 0;
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+    }
+    .cs_graph_cup {
+        position: static;
+        top: 0;
+        left: 0;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .cs_graph_cup p {
+        left: 0;
+    }
+    #magic_stick {
+        height: 60px;
+        width: 60px;
+        fill: white;    
+    }
+    #cup {
+        height: 60px;
+        width: 60px;
+        fill: white;
+    }
+    #frontend {
+        height: 60px;
+        width: 60px;
+        fill: white;    
+    }
+    #key {
+        height: 60px;
+        width: 60px;
+        fill: white;
+    }
+    #rocket {
+        height: 60px;
+        width: 60px;
+        fill: white;
+    }
+    #grow {
+        height: 60px;
+        width: 60px;
+        fill: white;    
+    }
+    .cs_graph_main svg {
+        position: static;
+        top: 0px;
+        left: 0px;
+    }
+}
