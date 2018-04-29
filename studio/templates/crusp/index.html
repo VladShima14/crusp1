@@ -172,7 +172,7 @@
                                 </g>
                             </svg>
                             <p>design</p>
-                            <div onmouseover="ChangeTextHome()" class="circle block2">
+                            <div onmouseover="ChangeText2()" class="circle block2">
                                 <div class="inside">
                                     <div class="point"></div>
                                     <div class="number">2</div>
@@ -247,7 +247,7 @@
                                 </g>
                                 </svg>
                             <p>frontend</p>
-                            <div onmouseover="ChangeTextHome()" class="circle block3">
+                            <div onmouseover="ChangeText3()" class="circle block3">
                                 <div class="inside">
                                     <div class="point"></div>
                                     <div class="number">3</div>
@@ -511,17 +511,19 @@
                             </svg>
                         </div>
                     </div>
-                            <form>
-                            <label class="cs_registration_form_block_name">
-                                <input type="text" name="" id="" placeholder="Your name" class="cs_registration_form_block_input">
+                            <form action="{% url "studio:contact_form" %}" method="post">
+                                {% csrf_token %}
+                                {{ form.non_fields_errors }}
+                            <label for='name' class="cs_registration_form_block_name">
+                                <input type="text" name="name" id="id_name" placeholder="Your name" class="cs_registration_form_block_input">
                             </label>
-                            <label class="cs_registration_form_block_email">
-                                <input type="text" name="" id="" placeholder="Your e-mail" class="cs_registration_form_block_input">
+                            <label for="email" class="cs_registration_form_block_email">
+                                <input type="text" name="email" id="id_email" placeholder="Your e-mail" class="cs_registration_form_block_input">
                             </label>
-                            <label class="cs_registration_form_block_message">
-                                    <textarea type="text" name="" id="" placeholder="Message" class="cs_registration_form_block_input_message"></textarea>
+                            <label for="message" class="cs_registration_form_block_message">
+                                    <textarea type="text" name="message" id="id_message" placeholder="Message" class="cs_registration_form_block_input_message"></textarea>
                             </label>
-                        <a href="#" class="cs_registration_button_a">send</a>
+                                <input type="submit" class="cs_registration_button_a" value="Send">
                     </form>
                     </div>
                 </div>
@@ -538,6 +540,16 @@
                 {
                 document.getElementById("p1").innerHTML="Once this is clarified, we design and build your website with your approval each step of the way.";
                 }
+            function ChangeText2()
+                {
+                document.getElementById("p1").innerHTML="Blah blah blah";
+                }
+            function ChangeText3()
+                {
+                document.getElementById("p1").innerHTML="Blah blah blah";
+                }
+
+
             function ChangeTextHome()
                 {
                 document.getElementById("p1").innerHTML="We like to listen to all of our clients needs and  discuss how we can effectively visualise and exceed any expectations,  regardless of complexities or budget. We like to keep our clients  updated and in the loop at each stage of any project, from concept to design Evoke Studio work closely with you in order to determine what type of Website/ Web solution will benefit your business.";
