@@ -35,10 +35,10 @@ def contact_form(request):
 
             ae = "{},\n {},\n {}\n".format(message, email, name)
 
-            recepients = ['vshemavnov@gmail.com']
+            recepients = ['yourmail@gmail.com']
 
             try:
-                send_mail(name, ae, 'vshemavnov@gmail.com', recepients)
+                send_mail(name, ae, 'yourmail@gmail.com', recepients)
             except BadHeaderError:
                 return HttpResponse('Invalid header found')
 
